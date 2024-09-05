@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Conserto de Televisões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Formulário de Conserto de Televisão</h1>
+        <form action="/submit" method="post">
+            <label for="nome">Nome do Cliente:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco" required>
+
+            <label for="modelo">Modelo da TV:</label>
+            <input type="text" id="modelo" name="modelo" required>
+
+            <label for="defeito">Tipo de Defeito:</label>
+            <select id="defeito" name="defeito">
+                <option value="Sem Imagem">Sem Imagem</option>
+                <option value="Sem Som">Sem Som</option>
+                <option value="Não Liga">Não Liga</option>
+                <option value="Outros">Outros</option>
+            </select>
+
+            <label for="descricao">Descrição Detalhada do Problema:</label>
+            <textarea id="descricao" name="descricao" rows="4" required></textarea>
+
+            <label for="data">Data de Entrada:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="status">Status do Conserto:</label>
+            <select id="status" name="status">
+                <option value="Aguardando Análise">Aguardando Análise</option>
+                <option value="Em Andamento">Em Andamento</option>
+                <option value="Concluído">Concluído</option>
+            </select>
+
+            <label for="orcamento">Orçamento (R$):</label>
+            <input type="number" id="orcamento" name="orcamento" min="0" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
